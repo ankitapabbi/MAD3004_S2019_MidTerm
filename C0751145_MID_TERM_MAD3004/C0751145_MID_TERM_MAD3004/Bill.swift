@@ -7,4 +7,21 @@
 //
 
 import Foundation
-
+class Bill : IDisplay{
+    let bill_id: Int?
+    var bill_date: Date
+    var bill_type: String?
+    var bill_total: Float?
+    
+    init(b_id:Int, b_date:Date, b_type:String ) {
+        self.bill_id = b_id
+        self.bill_date = b_date
+        self.bill_type = b_type
+    }
+    
+    
+    
+    func display() {
+        
+    }
+}
