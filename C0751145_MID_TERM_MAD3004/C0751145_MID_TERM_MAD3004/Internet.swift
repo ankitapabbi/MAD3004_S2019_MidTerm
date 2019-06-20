@@ -17,6 +17,7 @@ class Internet: Bill{
         self.provider_name = p_name
         self.internet_gb_used = i_gb_used
         super.init(b_id: bill_id, b_date: bill_date, b_type: bill_type)
+        
     }
     
    override func display() {
