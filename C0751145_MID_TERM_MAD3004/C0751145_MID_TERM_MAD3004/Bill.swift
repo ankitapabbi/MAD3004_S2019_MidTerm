@@ -13,6 +13,15 @@ class Bill : IDisplay{
     var bill_type: String?
     var bill_total: Float?
     
+    // Total is a Computed Property so we have to calculate here ...
+    var totalBill:Float{
+        var tb:Float = 0.0
+       
+        
+        return tb
+    }
+    
+    
     init(b_id:Int, b_date:Date, b_type:String ) {
         self.bill_id = b_id
         self.bill_date = b_date
