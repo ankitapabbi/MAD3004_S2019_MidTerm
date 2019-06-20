@@ -12,6 +12,10 @@ class Customer : IDisplay {
     var first_name: String?
     var last_name: String?
     var full_name: String?
+    var email_id: String?
+    var total_amout: Float?
+    private static var bill_dictionary=Dictionary<Int,Float>() // created a bill Dictionary
+    
     
     // here full name is the computed proterty
 //    var completeName{
@@ -19,10 +23,12 @@ class Customer : IDisplay {
 //
 //    }
 //
-    init(c_id: Int,f_name: String,l_name: String) {
+    init(c_id: Int,f_name: String,l_name: String,e_id: String,t_amt: Float) {
         self.customer_id = c_id
         self.first_name = f_name
         self.last_name = l_name
+        self.email_id = e_id
+        self.total_amout = t_amt
     }
     
     func display() {
