@@ -39,6 +39,17 @@ class Customer : IDisplay {
     
     }
     
+   // fetching the customer by its id 
+    static func getCustomerById(cust_id:Int) -> Customer? {
+        if let cust = customerList[cust_id] {
+            return cust as Customer
+        }
+        else {
+            return nil
+        }
+        
+    }
+    
     func display() {
         
     }
