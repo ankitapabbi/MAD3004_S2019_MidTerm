@@ -16,6 +16,8 @@ class Customer : IDisplay {
     var total_amout: Float?
     var bill_dictionary=Dictionary<Int,Double>() // created a bill Dictionary
     
+    private static var customerList=[Int:Customer]()
+    
     
     // here full name is the computed proterty
 //    var completeName{
@@ -32,8 +34,8 @@ class Customer : IDisplay {
         self.bill_dictionary = bill_dict
     }
     
-    static func bills(bill_id: Int,bill_total: Float) {
-        
+    static func customerDetail(customer: Customer) {
+        customerList.updateValue(customer, forKey: customer.customer_id!) // need to add ! because customer_id is optional
     
     }
     
