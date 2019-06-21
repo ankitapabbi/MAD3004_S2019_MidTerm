@@ -14,7 +14,8 @@ class Customer : IDisplay {
     var full_name: String?
     var email_id: String?
     var total_amout: Float?
-    var bill_dictionary=Dictionary<Int,Double>() // created a bill Dictionary
+    var bill_array: Array<Bill>
+    //var bill_dictionary=Dictionary<Int,Double>() // created a bill Dictionary
     
     private static var customerList=[Int:Customer]()
     
@@ -25,13 +26,13 @@ class Customer : IDisplay {
 //
 //    }
 //
-    init(c_id: Int,f_name: String,l_name: String,e_id: String,t_amt: Float,bill_dict: Dictionary<Int,Double>) {
+    init(c_id: Int,f_name: String,l_name: String,e_id: String,t_amt: Float,bill_array: Array<Bill>) {
         self.customer_id = c_id
         self.first_name = f_name
         self.last_name = l_name
         self.email_id = e_id
         self.total_amout = t_amt
-        self.bill_dictionary = bill_dict
+        self.bill_array = bill_array
     }
     
     static func customerDetail(customer: Customer) {
@@ -54,12 +55,30 @@ class Customer : IDisplay {
         print("Customer Full Name : \(self.first_name!) \(self.last_name!)")
     }
     
+    func billsss(){
+        
+        for i in bill_array{
+            print("Bill Id : \(i.bill_id!)")
+            print("Bill Date : \(i.bill_date)")
+            print("Bill Type : \(i.bill_type!)")
+            
+            print("**************************************")
+        }
+        
+    
+    }
+    
     func display() {
         print("Customer Id : \(self.customer_id!)")
         print(createFullName())
         print("Customer Email Id : \(self.email_id!)")
         print("      ----Bill Information----")
         print("**************************************")
+        self.billsss()
+        print("\n")
+        
+        
+        
 
        
     }

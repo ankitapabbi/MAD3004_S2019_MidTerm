@@ -7,8 +7,12 @@
 //
 
 import Foundation
+enum Bill_Type {
+    case  Internet, Mobile, Hydro
+}
+
 class Bill : IDisplay{
-    let bill_id: Int?
+    var bill_id: Int?
     var bill_date: Date
     var bill_type: String?
     var bill_total: Float?
@@ -37,5 +41,10 @@ class Bill : IDisplay{
         print("Bill Total : ")
         
         
+    }
+    init() {
+        self.bill_id = Int()
+        self.bill_date = Date()
+        self.bill_type = String()
     }
 }

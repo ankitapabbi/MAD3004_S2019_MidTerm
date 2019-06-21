@@ -9,31 +9,72 @@
 import Foundation
 
 // bill dictionaries 
-var bill1 = [1 : 2000.00, 2 : 500.00, 3 : 800.00]
-var bill2 = [1 : 080.00,2 : 400.00]
-var bill3 = [1 : 900.00]
-var bill4 = [1 : 8000.00,2 : 1500.00,3 : 8400.00,4 : 600.00]
+//var bill1 = [1 : 2000.00, 2 : 500.00, 3 : 800.00]
+//var bill2 = [1 : 080.00,2 : 400.00]
+//var bill3 = [1 : 900.00]
+//var bill4 = [1 : 8000.00,2 : 1500.00,3 : 8400.00,4 : 600.00]
+
+var b1 = Bill()
+var b2 = Bill()
+var b3 = Bill()
+var b4 = Bill()
+
+
+var bill_1 = Array<Bill>()
+var bill_2 = Array<Bill>()
+var bill_3 = Array<Bill>()
+var bill_4 = Array<Bill>()
+b1.bill_id = 1
+b1.bill_date = Date()
+b1.bill_type = "Internet"
+
+b2.bill_id = 2
+b2.bill_date = Date()
+b2.bill_type = "Hydro"
+
+b3.bill_id = 3
+b3.bill_date = Date()
+b3.bill_type = "Mobile"
+
+bill_1.append(b1)
+bill_1.append(b2)
+bill_1.append(b3)
+
+bill_2.append(b1)
+bill_2.append(b2)
+
+bill_3.append(b3)
+
+bill_4.append(b2)
+
+
+
+
+
 
 
 
 // creating Objects of Customer
-var customer_1: Customer = Customer.init(c_id: 1, f_name: "Vishal", l_name: "Pabbi", e_id: "vishal@gmail.com", t_amt: 1000, bill_dict: bill1)
-var customer_2: Customer = Customer.init(c_id: 2, f_name: "Diksha", l_name: "Pabbi", e_id: "diksha@gmail.com", t_amt: 500, bill_dict: bill2)
-var customer_3: Customer = Customer.init(c_id: 3, f_name: "Netra", l_name: "Sharma", e_id: "ns@gmail.com", t_amt: 600, bill_dict: bill3)
-var customer_4: Customer = Customer.init(c_id: 4, f_name: "Nisha", l_name: "Verma", e_id: "nverma@gmail.com", t_amt: 800, bill_dict: bill4)
+var customer_1: Customer = Customer.init(c_id: 1, f_name: "Vishal", l_name: "Pabbi", e_id: "vishal@gmail.com", t_amt: 1000, bill_array: bill_1)
+var customer_2: Customer = Customer.init(c_id: 2, f_name: "Diksha", l_name: "Pabbi", e_id: "diksha@gmail.com", t_amt: 500, bill_array: bill_2)
+var customer_3: Customer = Customer.init(c_id: 3, f_name: "Netra", l_name: "Sharma", e_id: "ns@gmail.com", t_amt: 600, bill_array: bill_3)
+var customer_4: Customer = Customer.init(c_id: 4, f_name: "Nisha", l_name: "Verma", e_id: "nverma@gmail.com", t_amt: 800, bill_array: bill_4)
 
 
-// Adding the Customers into the customerDetail Dictionary
+//// Adding the Customers into the customerDetail Dictionary
 Customer.customerDetail(customer: customer_1)
 Customer.customerDetail(customer: customer_2)
 Customer.customerDetail(customer: customer_3)
 Customer.customerDetail(customer: customer_4)
 
+// creating Objects of Internet
+
+
 
 
 // Fetching the customer by its id
 
-if let custs = Customer.getCustomerById(cust_id: 3) // here we are fetching the customer having customer_id = 3
+if let custs = Customer.getCustomerById(cust_id: 1) // here we are fetching the customer having customer_id = 3
  
 {
     print(custs.display())
