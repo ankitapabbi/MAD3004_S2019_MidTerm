@@ -70,11 +70,20 @@ Customer.customerDetail(customer: customer_4)
 // creating Objects of Internet
 
 
+// inserting data
+
+var internet_1: Internet = Internet.init(bill_id: 1, bill_date: Date(), bill_type: "Internet", p_name: "ABC", i_gb_used: 10.00)
+var internet_2: Internet = Internet.init(bill_id: 2, bill_date: Date(), bill_type: "Internet", p_name: "DEF", i_gb_used: 80.00)
+
+
+var mobile_1 : Mobile = Mobile.init(bill_id: 1, bill_date: Date(), bill_type: "Mobile", m_name: "Abc", p_name: "Fido", m_num: 2344566, gb_use: 30.00, min_use: 20.98)
+
+
 
 
 // Fetching the customer by its id
 
-if let custs = Customer.getCustomerById(cust_id: 1) // here we are fetching the customer having customer_id = 3
+if let custs = Customer.getCustomerById(cust_id: 3) // here we are fetching the customer having customer_id = 3
  
 {
     print(custs.display())
