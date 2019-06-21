@@ -30,3 +30,14 @@ Customer.customerDetail(customer: customer_3)
 Customer.customerDetail(customer: customer_4)
 
 
+
+// Fetching the customer by its id
+
+if let custs = Customer.getCustomerById(cust_id: 3) // here we are fetching the customer having customer_id = 3
+ 
+{
+    print(custs.display())
+}else{
+    print("This CUASTOMER do not EXISIT")
+}
+

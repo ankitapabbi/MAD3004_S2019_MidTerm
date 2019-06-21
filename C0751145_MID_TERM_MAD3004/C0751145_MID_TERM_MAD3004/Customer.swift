@@ -50,7 +50,17 @@ class Customer : IDisplay {
         
     }
     
+    func createFullName(){
+        print("Customer Full Name : \(self.first_name!) \(self.last_name!)")
+    }
+    
     func display() {
-        
+        print("Customer Id : \(self.customer_id!)")
+        print(createFullName())
+        print("Customer Email Id : \(self.email_id!)")
+        print("      ----Bill Information----")
+        print("**************************************")
+
+       
     }
 }

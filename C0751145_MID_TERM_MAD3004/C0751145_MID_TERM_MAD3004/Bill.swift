@@ -16,7 +16,7 @@ class Bill : IDisplay{
     // Total is a Computed Property so we have to calculate here ...
     var totalBill:Float{
         var tb:Float = 0.0
-       
+       //tb = 
         
         return tb
     }
@@ -31,6 +31,11 @@ class Bill : IDisplay{
     
     
     func display() {
+        print("Bill Id : \(self.bill_id)")
+        print("Bill Date : \(self.bill_date)")
+        print("Bill Type : \(self.bill_type)")
+        print("Bill Total : ")
+        
         
     }
 }
