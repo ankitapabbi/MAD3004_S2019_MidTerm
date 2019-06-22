@@ -82,10 +82,11 @@ import Foundation
 //
 //
 
-do {
+
     
-    
+
 var bill_1  = Mobile(bill_id: 1, bill_date: Date(), bill_type: "Mobile", m_name: "Google", p_name: "Pixel", m_num: 6781234567, gb_use: 50.9, min_use: 30.7)
+    
 var bill_2  = Mobile(bill_id: 2, bill_date: Date(), bill_type: "Mobile", m_name: "Sony", p_name: "E2", m_num: 4571234567, gb_use: 60.9, min_use: 70.7)
 var bill_3  = Mobile(bill_id: 1, bill_date: Date(), bill_type: "Mobile", m_name: "Google", p_name: "Pixel", m_num: 6981230067, gb_use: 30.9, min_use: 15.7)
 
@@ -121,17 +122,17 @@ if let custs = Customer.getCustomerById(cust_id: 1) // here we are fetching the 
 }
 
 
-}
-catch ErrorType.InvalidNumber {
-    print("WRONG NUMBER")
-}
-catch ErrorType.InvaildEmail{
-    print("Wrong Email")
-}
 
-catch {
-    print("Error occured...!")
-}
+//catch ErrorType.InvalidNumber {
+//    print("WRONG NUMBER")
+//}
+//catch ErrorType.InvaildEmail{
+//    print("Wrong Email")
+//}
+//
+//catch {
+//    print("Error occured...!")
+//}
 
 
 

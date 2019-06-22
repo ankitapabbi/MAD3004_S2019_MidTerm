@@ -13,8 +13,18 @@ class Customer : IDisplay {
     var last_name: String?
     var full_name: String?
     var email_id: String?
-    var total_amout: Float?
-    var bill_array: [Bill]
+     var bill_array: [Bill]
+    var total_amout: Double // computed variable
+    {
+        var TotalAmount: Double = 0.0
+        
+        for b in bill_array
+        {
+            TotalAmount = TotalAmount + b.bill_total!
+        }
+        return TotalAmount
+    }
+   
     //var bill_dictionary=Dictionary<Int,Double>() // created a bill Dictionary
     
     private static var customerList=[Int:Customer]()
@@ -61,6 +71,7 @@ class Customer : IDisplay {
             print("Bill Date : \(i.bill_date)")
             print("Bill Type : \(i.bill_type!)")
             
+            
             print("**************************************")
         }
         
@@ -89,5 +100,6 @@ class Customer : IDisplay {
         }
         print("=========================================")
         print("\n")
+        print("Total Amount : \(self.total_amout)")
     }
 }

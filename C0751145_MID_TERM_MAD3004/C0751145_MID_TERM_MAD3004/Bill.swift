@@ -15,7 +15,7 @@ class Bill : IDisplay{
     var bill_id: Int?
     var bill_date: Date
     var bill_type: String?
-    var bill_total: Float?
+    var bill_total: Double?
     
     // Total is a Computed Property so we have to calculate here ...
     var totalBill:Float{
