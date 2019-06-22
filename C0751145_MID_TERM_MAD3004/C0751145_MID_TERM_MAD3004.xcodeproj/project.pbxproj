@@ -16,6 +16,7 @@
 		7EF589B322BC42C5006FA491 /* IDIsplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF589B222BC42C5006FA491 /* IDIsplay.swift */; };
 		7EF589B522BC66C0006FA491 /* Dollar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF589B422BC66C0006FA491 /* Dollar.swift */; };
 		7EF589B722BC6705006FA491 /* TheGB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF589B622BC6705006FA491 /* TheGB.swift */; };
+		7EF589B922BDBB08006FA491 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF589B822BDBB08006FA491 /* Errors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -41,6 +42,7 @@
 		7EF589B222BC42C5006FA491 /* IDIsplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDIsplay.swift; sourceTree = "<group>"; };
 		7EF589B422BC66C0006FA491 /* Dollar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dollar.swift; sourceTree = "<group>"; };
 		7EF589B622BC6705006FA491 /* TheGB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheGB.swift; sourceTree = "<group>"; };
+		7EF589B822BDBB08006FA491 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 				7EF589AC22BC429A006FA491 /* Mobile.swift */,
 				7EF589AE22BC42A7006FA491 /* Hydro.swift */,
 				7EF589B022BC42B3006FA491 /* Customer.swift */,
+				7EF589B822BDBB08006FA491 /* Errors.swift */,
 			);
 			path = C0751145_MID_TERM_MAD3004;
 			sourceTree = "<group>";
@@ -165,6 +168,7 @@
 				7EF589B722BC6705006FA491 /* TheGB.swift in Sources */,
 				7EF589B122BC42B3006FA491 /* Customer.swift in Sources */,
 				7EF589A022BC3BD9006FA491 /* main.swift in Sources */,
+				7EF589B922BDBB08006FA491 /* Errors.swift in Sources */,
 				7EF589B522BC66C0006FA491 /* Dollar.swift in Sources */,
 				7EF589B322BC42C5006FA491 /* IDIsplay.swift in Sources */,
 				7EF589AD22BC429A006FA491 /* Mobile.swift in Sources */,

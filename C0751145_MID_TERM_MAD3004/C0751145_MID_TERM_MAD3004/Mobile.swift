@@ -25,10 +25,11 @@ class Mobile : Bill {
     }
     
     override func display() {
-        print("Manufacturer Name : \(self.manufacturer_name)")
-        print("Plan Name :\(self.plan_name)" )
-        print("Mobile Number : \(self.mobile_number)" )
-        print("GB Used \(self.gb_used)")
-        print("minute Used : \(self.minute_used)")
+        super.display()
+        print("Manufacturer Name : \(self.manufacturer_name!)")
+        print("Plan Name :\(self.plan_name!)" )
+        print("Mobile Number : \(self.mobile_number!)" )
+        print("GB Used \(self.gb_used!)")
+        print("minute Used : \(self.minute_used!)")
     }
 }

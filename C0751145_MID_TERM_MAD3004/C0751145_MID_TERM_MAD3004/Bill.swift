@@ -34,9 +34,9 @@ class Bill : IDisplay{
     
     
     func display() {
-        print("Bill Id : \(self.bill_id)")
+        print("Bill Id : \(self.bill_id!)")
         print("Bill Date : \(self.bill_date)")
-        print("Bill Type : \(self.bill_type)")
+        print("Bill Type : \(self.bill_type!)")
         print("Bill Total : \(self.totalBill)")
         
         

@@ -14,7 +14,7 @@ class Customer : IDisplay {
     var full_name: String?
     var email_id: String?
     var total_amout: Float?
-    var bill_array: Array<Bill>
+    var bill_array: [Bill]
     //var bill_dictionary=Dictionary<Int,Double>() // created a bill Dictionary
     
     private static var customerList=[Int:Customer]()
@@ -26,12 +26,11 @@ class Customer : IDisplay {
 //
 //    }
 //
-    init(c_id: Int,f_name: String,l_name: String,e_id: String,t_amt: Float,bill_array: Array<Bill>) {
+    init(c_id: Int,f_name: String,l_name: String,e_id: String,bill_array: [Bill]) {
         self.customer_id = c_id
         self.first_name = f_name
         self.last_name = l_name
         self.email_id = e_id
-        self.total_amout = t_amt
         self.bill_array = bill_array
     }
     
@@ -74,12 +73,21 @@ class Customer : IDisplay {
         print("Customer Email Id : \(self.email_id!)")
         print("      ----Bill Information----")
         print("**************************************")
-        self.billsss()
+        for b in bill_array {
+            b.display()
+            /*
+            if (b is Hydro){
+                b.display()
+            }
+            else if(b is Mobile){
+                b.display()
+            }
+            else if (b is Internet){
+                b.display()
+            }
+             */
+        }
+        print("=========================================")
         print("\n")
-        
-        
-        
-
-       
     }
 }
