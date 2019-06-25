@@ -84,7 +84,7 @@ import Foundation
 
 
     
-
+do{
 var bill_1  = Mobile(bill_id: 1, bill_date: Date(), bill_type: "Mobile", m_name: "Google", p_name: "Pixel", m_num: 6781234567, gb_use: 50.9, min_use: 30.7)
     
 var bill_2  = Mobile(bill_id: 2, bill_date: Date(), bill_type: "Mobile", m_name: "Sony", p_name: "E2", m_num: 4571234567, gb_use: 60.9, min_use: 70.7)
@@ -98,15 +98,15 @@ var bill_7 = Hydro(bill_id: 7, bill_date: Date(), bill_type: "Hydro", a_name: "I
 
 // creating customers
 
-var customer_1 = Customer(c_id: 1, f_name: "Vishal", l_name: "Pabbi", e_id: "vishal@gmail.com", bill_array: [bill_1,bill_2,bill_3])
+    var customer_1 = try Customer(c_id: 1, f_name: "Vishal", l_name: "Pabbi", e_id: "vishal@gmail.com",ph_num: 6893451234, bill_array: [bill_1,bill_2,bill_3])
 customer_1.display() // displaying customer detail
 Customer.customerDetail(customer: customer_1) // addind into customer dictionary
 
-var customer_2 = Customer(c_id: 2, f_name: "Diksha", l_name: "Sharma", e_id: "diksha@gmail.com", bill_array: [bill_7,bill_5,bill_4])
+    var customer_2 = try Customer(c_id: 2, f_name: "Diksha", l_name: "Sharma", e_id: "diksha@gmail.com",ph_num: 6893498234, bill_array: [bill_7,bill_5,bill_4])
 customer_2.display()
 Customer.customerDetail(customer: customer_2)
 
-var customer_3 = Customer(c_id: 3, f_name: "Ankita", l_name: "Pabbi", e_id: "apabbi@gmail.com", bill_array: [bill_3,bill_2,bill_6,bill_1])
+    var customer_3 = try Customer(c_id: 3, f_name: "Ankita", l_name: "Pabbi", e_id: "apabbi@gmail.com",ph_num: 6453451234, bill_array: [bill_3,bill_2,bill_6,bill_1])
 customer_3.display()
 Customer.customerDetail(customer: customer_3)
 
@@ -122,17 +122,14 @@ if let custs = Customer.getCustomerById(cust_id: 1) // here we are fetching the 
 }
 
 
+}
+catch ErrorType.InvalidNumber {
+    print("WRONG NUMBER")
+}
 
-//catch ErrorType.InvalidNumber {
-//    print("WRONG NUMBER")
-//}
-//catch ErrorType.InvaildEmail{
-//    print("Wrong Email")
-//}
-//
-//catch {
-//    print("Error occured...!")
-//}
+catch {
+    print("Error occured...!")
+}
 
 
 

@@ -7,12 +7,14 @@
 //
 
 import Foundation
+
 class Customer : IDisplay {
     let customer_id: Int?
     var first_name: String?
     var last_name: String?
     var full_name: String?
     var email_id: String?
+    var phone_num : Int
      var bill_array: [Bill]
     var total_amout: Double // computed variable
     {
@@ -20,7 +22,7 @@ class Customer : IDisplay {
         
         for b in bill_array
         {
-            TotalAmount = TotalAmount + b.bill_total!
+           // TotalAmount = TotalAmount + b.bill_total!
         }
         return TotalAmount
     }
@@ -36,11 +38,17 @@ class Customer : IDisplay {
 //
 //    }
 //
-    init(c_id: Int,f_name: String,l_name: String,e_id: String,bill_array: [Bill]) {
+    init(c_id: Int,f_name: String,l_name: String,e_id: String,ph_num:Int,bill_array: [Bill]) throws {
+        
+        if ph_num < 10 {
+            throw ErrorType.InvalidNumber
+        }
+        
         self.customer_id = c_id
         self.first_name = f_name
         self.last_name = l_name
         self.email_id = e_id
+        self.phone_num = ph_num
         self.bill_array = bill_array
     }
     
